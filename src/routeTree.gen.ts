@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FavoritesRouteImport } from './routes/favorites'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as PetsRouteImport } from './routes/pets'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const FavoritesRoute = FavoritesRouteImport.update({
   path: '/favorites',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PetsRoute = PetsRouteImport.update({
   id: '/pets',
   path: '/pets',
@@ -32,30 +38,34 @@ const PetsRoute = PetsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/favorites': typeof FavoritesRoute
+  '/how-it-works': typeof HowItWorksRoute
   '/pets': typeof PetsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/favorites': typeof FavoritesRoute
+  '/how-it-works': typeof HowItWorksRoute
   '/pets': typeof PetsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/favorites': typeof FavoritesRoute
+  '/how-it-works': typeof HowItWorksRoute
   '/pets': typeof PetsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/favorites' | '/pets'
+  fullPaths: '/' | '/favorites' | '/how-it-works' | '/pets'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/favorites' | '/pets'
-  id: '__root__' | '/' | '/favorites' | '/pets'
+  to: '/' | '/favorites' | '/how-it-works' | '/pets'
+  id: '__root__' | '/' | '/favorites' | '/how-it-works' | '/pets'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FavoritesRoute: typeof FavoritesRoute
+  HowItWorksRoute: typeof HowItWorksRoute
   PetsRoute: typeof PetsRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FavoritesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pets': {
       id: '/pets'
       path: '/pets'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FavoritesRoute: FavoritesRoute,
+  HowItWorksRoute: HowItWorksRoute,
   PetsRoute: PetsRoute,
 }
 export const routeTree = rootRouteImport
