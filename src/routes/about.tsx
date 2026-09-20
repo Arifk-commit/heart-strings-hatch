@@ -608,7 +608,7 @@ function AboutPage() {
                       Email Helpline
                     </p>
                     <p className="font-display font-bold text-foreground">
-                      hello@pawconnect.demo
+                      junaidstudy123@gmail.com
                     </p>
                   </div>
                 </div>
