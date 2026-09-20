@@ -37,10 +37,11 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
-import dogsImage from "@/assets/pets-dogs.jpg";
-import catsImage from "@/assets/pets-cats.jpg";
-import rabbitsImage from "@/assets/pets-rabbits.jpg";
-import birdsImage from "@/assets/pets-birds.jpg";
+import pet1Buddy from "@/assets/pet-1-buddy.jpg";
+import teamAditi from "@/assets/team-aditi.jpg";
+import teamKabir from "@/assets/team-kabir.jpg";
+import teamSanjana from "@/assets/team-sanjana.jpg";
+import teamTanya from "@/assets/team-tanya.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -95,28 +96,28 @@ const teamMembers = [
   {
     name: "Dr. Aditi Rao",
     role: "Chief Veterinary Officer",
-    image: dogsImage,
+    image: teamAditi,
     bio: "12+ years in companion animal surgery and wildlife rehabilitation. Leads our clinical vetting and surgical sterilization protocols.",
     pet: "Adopted mother of 3 Indie rescue dogs.",
   },
   {
     name: "Kabir Mehta",
     role: "Director of Rescue & Field Operations",
-    image: catsImage,
+    image: teamKabir,
     bio: "Passionate animal behaviorist with a decade of emergency rescue field dispatch and canine rehabilitation experience.",
     pet: "Rescued 2 shelter senior cats.",
   },
   {
     name: "Dr. Sanjana Sen",
     role: "Feline & Small Pet Specialist",
-    image: rabbitsImage,
+    image: teamSanjana,
     bio: "Certified veterinary behaviorist focusing on stress-free foster acclimation, rabbit health, and multi-pet introductions.",
     pet: "Cares for 2 free-roam rescue rabbits.",
   },
   {
     name: "Tanya Deshmukh",
     role: "Head of Adoption Matchmaking",
-    image: birdsImage,
+    image: teamTanya,
     bio: "Has helped match over 1,200 pets with forever families. Specializes in finding the ideal pet for first-time adopters.",
     pet: "Proud bird guardian & foster mom.",
   },
@@ -373,7 +374,7 @@ function AboutPage() {
             <div className="lg:col-span-5">
               <div className="relative mx-auto aspect-[4/3] w-full overflow-hidden rounded-3xl border border-surface-glass-border bg-card shadow-lift">
                 <img
-                  src={dogsImage}
+                  src={pet1Buddy}
                   alt="Rescued dog enjoying life"
                   className="h-full w-full object-cover"
                 />

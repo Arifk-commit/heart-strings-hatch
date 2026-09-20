@@ -35,10 +35,12 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import dogsImage from "@/assets/pets-dogs.jpg";
-import catsImage from "@/assets/pets-cats.jpg";
-import rabbitsImage from "@/assets/pets-rabbits.jpg";
-import birdsImage from "@/assets/pets-birds.jpg";
+import pet1Buddy from "@/assets/pet-1-buddy.jpg";
+import pet2Luna from "@/assets/pet-2-luna.jpg";
+import pet3Milo from "@/assets/pet-3-milo.jpg";
+import pet4Rio from "@/assets/pet-4-rio.jpg";
+import pet6Simba from "@/assets/pet-6-simba.jpg";
+import pet13Olive from "@/assets/pet-13-olive.jpg";
 
 export const Route = createFileRoute("/success-stories")({
   head: () => ({
@@ -89,7 +91,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "Aarav & Neha Sharma",
     location: "Mumbai, India",
     date: "June 2026",
-    image: dogsImage,
+    image: pet1Buddy,
     quote:
       "Mochi transformed our evening routine into pure happiness. He's not just a pet; he is our child's most loyal guardian.",
     story:
@@ -109,7 +111,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "The Iyer Family",
     location: "Bengaluru, India",
     date: "April 2026",
-    image: catsImage,
+    image: pet2Luna,
     quote:
       "She brought a calm, therapeutic rhythm to our bustling home. The children read bedtime stories to her every evening.",
     story:
@@ -129,7 +131,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "Rhea Sen",
     location: "Pune, India",
     date: "February 2026",
-    image: rabbitsImage,
+    image: pet3Milo,
     quote:
       "Learning Pip’s silent vocabulary and watching him binky across the living room carpet has brought so much peace to my work-from-home life.",
     story:
@@ -149,7 +151,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "Dev & Priya Patel",
     location: "Ahmedabad, India",
     date: "May 2026",
-    image: birdsImage,
+    image: pet4Rio,
     quote:
       "Our home is filled with cheerful whistles and morning chatter. Adopting bonded birds was the best decision we ever made.",
     story:
@@ -169,7 +171,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "Karan Verma",
     location: "Delhi NCR, India",
     date: "January 2026",
-    image: dogsImage,
+    image: pet6Simba,
     quote:
       "Indie dogs have the biggest hearts and incredible resilience. Simba learned commands in just one week and loves trekking.",
     story:
@@ -189,7 +191,7 @@ const defaultStories: SuccessStory[] = [
     adopter: "Meera Nair",
     location: "Kochi, India",
     date: "March 2026",
-    image: catsImage,
+    image: pet13Olive,
     quote:
       "They were terrified at the shelter, but patience and high window perches gave them the security to blossom.",
     story:
@@ -244,10 +246,10 @@ function SuccessStoriesPage() {
     }
 
     const speciesImageMap: Record<string, string> = {
-      Dog: dogsImage,
-      Cat: catsImage,
-      Rabbit: rabbitsImage,
-      Bird: birdsImage,
+      Dog: pet1Buddy,
+      Cat: pet2Luna,
+      Rabbit: pet3Milo,
+      Bird: pet4Rio,
     };
 
     const newStoryItem: SuccessStory = {
@@ -258,7 +260,7 @@ function SuccessStoriesPage() {
       adopter: formData.adopter,
       location: formData.location || "Local Community",
       date: "Just Now",
-      image: speciesImageMap[formData.species] || dogsImage,
+      image: speciesImageMap[formData.species] || pet1Buddy,
       quote: formData.quote,
       story: formData.story,
       milestones: ["Newly Adopted", "Cherished Family Member"],

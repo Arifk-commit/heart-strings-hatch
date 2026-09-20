@@ -48,8 +48,6 @@ import {
 } from "lucide-react";
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
-import dogsImage from "@/assets/pets-dogs.jpg";
-import catsImage from "@/assets/pets-cats.jpg";
 
 export const Route = createFileRoute("/donate")({
   head: () => ({

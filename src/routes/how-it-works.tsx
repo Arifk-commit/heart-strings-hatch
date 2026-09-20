@@ -28,10 +28,10 @@ import {
   Users,
 } from "lucide-react";
 import { useState } from "react";
-import dogsImage from "@/assets/pets-dogs.jpg";
-import catsImage from "@/assets/pets-cats.jpg";
-import rabbitsImage from "@/assets/pets-rabbits.jpg";
-import birdsImage from "@/assets/pets-birds.jpg";
+import pet1Buddy from "@/assets/pet-1-buddy.jpg";
+import pet2Luna from "@/assets/pet-2-luna.jpg";
+import pet3Milo from "@/assets/pet-3-milo.jpg";
+import pet4Rio from "@/assets/pet-4-rio.jpg";
 
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
@@ -63,7 +63,7 @@ const adoptionSteps = [
     timeframe: "At your pace · 1–2 days",
     icon: Search,
     color: "bg-amber-500/10 text-amber-600 dark:text-amber-400",
-    image: dogsImage,
+    image: pet1Buddy,
     description:
       "Browse our curated catalog of rescue animals. Filter by species, age, temperament, size, and compatibility with kids or other pets.",
     details: [
@@ -81,7 +81,7 @@ const adoptionSteps = [
     timeframe: "5 mins to apply · 24–48 hr review",
     icon: HeartHandshake,
     color: "bg-teal/15 text-teal",
-    image: catsImage,
+    image: pet2Luna,
     description:
       "Fill out our straightforward adoption inquiry. This helps our coordinators verify that the pet's unique needs align with your living environment.",
     details: [
@@ -99,7 +99,7 @@ const adoptionSteps = [
     timeframe: "Flexible scheduling · 45–60 mins",
     icon: Users,
     color: "bg-sky-500/10 text-sky-600 dark:text-sky-400",
-    image: rabbitsImage,
+    image: pet3Milo,
     description:
       "Meet your prospective companion in a comfortable, relaxed environment. See their natural temperament and see if the spark is there for everyone.",
     details: [
@@ -117,7 +117,7 @@ const adoptionSteps = [
     timeframe: "Same-day handover after approval",
     icon: Home,
     color: "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400",
-    image: birdsImage,
+    image: pet4Rio,
     description:
       "Sign the adoption pledge, receive all medical records and starter care tips, and officially welcome your new family member home.",
     details: [
@@ -318,7 +318,7 @@ function HowItWorksPage() {
             <div className="relative">
               <div className="relative mx-auto aspect-[4/3] w-full max-w-lg overflow-hidden rounded-3xl border border-surface-glass-border bg-card shadow-lift">
                 <img
-                  src={dogsImage}
+                  src={pet1Buddy}
                   alt="Happy adopted dog with family"
                   className="h-full w-full object-cover"
                 />
