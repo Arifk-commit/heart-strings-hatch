@@ -27,6 +27,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { useApp } from "@/context/app-context";
+import { useAuth } from "@/context/auth-context";
 import { getPet, pets, type Pet } from "@/data/pets";
 import { cn } from "@/lib/utils";
 
@@ -73,9 +74,21 @@ export const Route = createFileRoute("/pets/$petId")({
 function PetDetailPage() {
   const { pet } = Route.useLoaderData();
   const { isFavorite, toggleFavorite } = useApp();
+  const { user, openAuthModal } = useAuth();
   const [formOpen, setFormOpen] = useState(false);
 
   const saved = isFavorite(pet.id);
+
+  const handleAdoptClick = () => {
+    if (!user) {
+      openAuthModal(
+        `Please sign in or create an account to start your adoption application for ${pet.name}.`,
+        () => setFormOpen(true),
+      );
+    } else {
+      setFormOpen(true);
+    }
+  };
 
   const handleShare = () => {
     if (navigator.clipboard) {
@@ -487,7 +500,7 @@ function PetDetailPage() {
                   <Button
                     size="lg"
                     className="w-full text-base font-bold shadow-warm"
-                    onClick={() => setFormOpen(true)}
+                    onClick={handleAdoptClick}
                   >
                     Apply to Adopt {pet.name}
                   </Button>
@@ -608,6 +621,7 @@ function PetDetailPage() {
         open={formOpen}
         onOpenChange={setFormOpen}
         petName={pet.name}
+        petId={pet.id}
       />
     </main>
   );
