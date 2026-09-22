@@ -63,7 +63,7 @@ export function Navbar() {
           <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground shadow-warm">
             <PawPrint />
           </span>
-          <span>
+          <span className="hidden sm:inline">
             Paw<span className="text-primary">Connect</span>
           </span>
         </Link>
