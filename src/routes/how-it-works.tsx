@@ -200,7 +200,7 @@ const readinessQuestions = [
 const faqs = [
   {
     q: "How much does it cost to adopt a pet, and what is included?",
-    a: "PawConnect showcases fictional profiles with standard nonprofit adoption fee guidelines ($50–$150). This modest fee covers comprehensive veterinary examinations, core vaccinations, spay/neuter surgery, deworming, and microchip registration. You receive a pet with medical investments often exceeding $400 in private clinic costs.",
+    a: "PawConnect showcases fictional profiles with standard nonprofit adoption fee guidelines (₹2,000–₹5,000). This modest fee covers comprehensive veterinary examinations, core vaccinations, spay/neuter surgery, deworming, and microchip registration. You receive a pet with medical investments often exceeding ₹15,000 in private clinic costs.",
   },
   {
     q: "Can I adopt if I live in an apartment or rent my home?",

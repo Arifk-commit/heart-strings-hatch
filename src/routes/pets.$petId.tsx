@@ -466,14 +466,14 @@ function PetDetailPage() {
                       Standard Adoption Fee:
                     </span>
                     <span className="font-display font-bold text-foreground">
-                      $50 – $100
+                      ₹2,000 – ₹5,000
                     </span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">
                       Medical Investment:
                     </span>
-                    <span className="font-bold text-teal">Included ($400+ value)</span>
+                    <span className="font-bold text-teal">Included (₹15,000+ value)</span>
                   </div>
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-muted-foreground">
